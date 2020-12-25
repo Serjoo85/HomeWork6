@@ -5,7 +5,7 @@ namespace Task3._1
 {
     public partial class Form1 : Form
     {
-        struct lblText
+        internal struct lblText
         {
             public static int[] text = new int[6];
             public static void Add(int index, int value)
@@ -27,7 +27,7 @@ namespace Task3._1
             }
         }
 
-        public Mdlgts Mdlgts = new Mdlgts(BusinessLogic.GetDelList());
+        internal Mdlgts Mdlgts = new Mdlgts(BusinessLogic.GetDelList());
         
         public Form1()
         {
@@ -49,8 +49,6 @@ namespace Task3._1
             lbl4.Text = "";
             lbl5.Text = "";
             lbl6.Text = "";
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

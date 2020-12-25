@@ -218,6 +218,7 @@ namespace Task3._1
             // 
             // Form1
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 590);
@@ -238,8 +239,10 @@ namespace Task3._1
             this.Controls.Add(this.lblTitle1);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnGenerate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Комплексная сортировка";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
