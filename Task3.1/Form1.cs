@@ -99,43 +99,43 @@ namespace Task3._1
 
         private void cbFirtsName_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbFirtsName, 1);
+            CheckboxAction(cbFirtsName.Checked, 1);
             SortStList();
         }
 
         private void cbLastName_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbLastName, 2);
+            CheckboxAction(cbLastName.Checked, 2);
             SortStList();
         }
 
         private void cbAge_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbAge, 3);
+            CheckboxAction(cbAge.Checked, 3);
             SortStList();
         }
 
         private void cbFaculty_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbFaculty, 4);
+            CheckboxAction(cbFaculty.Checked, 4);
             SortStList();
         }
 
         private void cbCourse_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbCourse, 5);
+            CheckboxAction(cbCourse.Checked, 5);
             SortStList();
         }
 
         private void cbAverageG_CheckedChanged(object sender, EventArgs e)
         {
-            CheckboxAction(cbAverageG, 6);
+            CheckboxAction(cbAverageG.Checked, 6);
             SortStList();
         }
 
-        private void CheckboxAction(CheckBox cb, int cbNumber)
+        private void CheckboxAction(bool cbCheked, int cbNumber)
         {
-            if (cb.Checked) lblText.Add(cbNumber, Mdlgts.Add(cbNumber));
+            if (cbCheked) lblText.Add(cbNumber, Mdlgts.Add(cbNumber));
             else
             {
                 Mdlgts.Remove(cbNumber);
