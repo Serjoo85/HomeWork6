@@ -22,7 +22,7 @@ namespace Task3._1
         /// </summary>
         internal struct lblText
         {
-            public static int[] text = new int[6];
+            public static int[] textLbl = new int[6];
             
             /// <summary>
             /// Добавление номера в массив.
@@ -36,19 +36,26 @@ namespace Task3._1
             public static void Add(int cbNumber, int index)
             {
                 cbNumber--;
-                text[cbNumber] = index;
+                textLbl[cbNumber] = index;
             }
+
+            /// <summary>
+            /// Обновляем нумерацию Checkboxes
+            /// </summary>
+            /// <param name="index">
+            /// номер чекбокса (индекс массива text)
+            /// </param>
             public static void Remove(int index)
             {
                 index--;
-                for(int i = 0; i < text.Length; i++)
+                for(int i = 0; i < textLbl.Length; i++)
                 {
                     if(i != index)
                     {
-                        if (text[i] > text[index]) text[i]--;
+                        if (textLbl[i] > textLbl[index]) textLbl[i]--;
                     }
                 }                
-                text[index] = 0;                
+                textLbl[index] = 0;                
             }
         }
 
@@ -156,12 +163,12 @@ namespace Task3._1
 
         private void LblPrint()
         {
-            lbl1.Text = (lblText.text[0] != 0) ? lblText.text[0].ToString() : "";
-            lbl2.Text = (lblText.text[1] != 0) ? lblText.text[1].ToString() : "";
-            lbl3.Text = (lblText.text[2] != 0) ? lblText.text[2].ToString() : "";
-            lbl4.Text = (lblText.text[3] != 0) ? lblText.text[3].ToString() : "";
-            lbl5.Text = (lblText.text[4] != 0) ? lblText.text[4].ToString() : "";
-            lbl6.Text = (lblText.text[5] != 0) ? lblText.text[5].ToString() : "";
+            lbl1.Text = (lblText.textLbl[0] != 0) ? lblText.textLbl[0].ToString() : "";
+            lbl2.Text = (lblText.textLbl[1] != 0) ? lblText.textLbl[1].ToString() : "";
+            lbl3.Text = (lblText.textLbl[2] != 0) ? lblText.textLbl[2].ToString() : "";
+            lbl4.Text = (lblText.textLbl[3] != 0) ? lblText.textLbl[3].ToString() : "";
+            lbl5.Text = (lblText.textLbl[4] != 0) ? lblText.textLbl[4].ToString() : "";
+            lbl6.Text = (lblText.textLbl[5] != 0) ? lblText.textLbl[5].ToString() : "";
         }
     }
 }

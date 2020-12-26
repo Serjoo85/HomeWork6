@@ -35,8 +35,11 @@ namespace Task3._1
             f += delList[x - 1];
             return f.GetInvocationList().ToList().Count();             
         }
-
-        // Удаляем делегат сортировки.
+        
+        /// <summary>
+        /// Удаляем делегат сортировки.
+        /// </summary>
+        /// <param name="x"></param>
         internal void Remove(int x)
         {
             f -= delList[x - 1];            
