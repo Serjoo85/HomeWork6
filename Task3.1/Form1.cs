@@ -50,7 +50,7 @@ namespace Task3._1
 
         private void Form1_Load(object sender, EventArgs e)
         {            
-            Student.CreatStudentList(1000);
+            Student.GenerateStudentList(1000);
             lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
         }
 
@@ -61,7 +61,7 @@ namespace Task3._1
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {            
-            Student.CreatStudentList(1000);
+            Student.GenerateStudentList(1000);
             lvStudentTable.Items.Clear();
             lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
         }
@@ -123,6 +123,7 @@ namespace Task3._1
             }
             LblPrint();
         }
+
         private void SortStList()
         {
             if (Mdlgts.f != null)

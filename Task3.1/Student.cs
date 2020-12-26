@@ -6,8 +6,7 @@ namespace Task3._1
 {
     public class Student : IComparable
     {
-        private static Delegate[] arrDel;
-        private delegate T Del<T, K>(K st1, K st2);
+        private static Delegate[] arrDel;        
         public static List<Student> StList = new List<Student>();
         internal string FirstName { get; set; }
         internal string LastName { get; set; }
@@ -27,7 +26,7 @@ namespace Task3._1
             this.AverageGrade = AverageGrade;
         }
 
-        public static void CreatStudentList(int number)
+        public static void GenerateStudentList(int number)
         {
             StList.Clear();
             for (int i = 0; i < number; i++)
