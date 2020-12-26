@@ -30,7 +30,6 @@ namespace Task3._1
         private void InitializeComponent()
         {
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.btnSort = new System.Windows.Forms.Button();
             this.lblTitle1 = new System.Windows.Forms.Label();
             this.cbFirtsName = new System.Windows.Forms.CheckBox();
             this.cbLastName = new System.Windows.Forms.CheckBox();
@@ -46,6 +45,7 @@ namespace Task3._1
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
+            this.lblSuggest = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGenerate
@@ -57,16 +57,6 @@ namespace Task3._1
             this.btnGenerate.Text = "Generate new";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // btnSort
-            // 
-            this.btnSort.Location = new System.Drawing.Point(549, 268);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(125, 45);
-            this.btnSort.TabIndex = 2;
-            this.btnSort.Text = "Sort list";
-            this.btnSort.UseVisualStyleBackColor = true;
-            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // lblTitle1
             // 
@@ -145,7 +135,7 @@ namespace Task3._1
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(549, 324);
+            this.btnReset.Location = new System.Drawing.Point(551, 278);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(125, 45);
             this.btnReset.TabIndex = 10;
@@ -216,12 +206,22 @@ namespace Task3._1
             this.lbl6.TabIndex = 19;
             this.lbl6.Text = "lbl";
             // 
+            // lblSuggest
+            // 
+            this.lblSuggest.AutoSize = true;
+            this.lblSuggest.Location = new System.Drawing.Point(536, 336);
+            this.lblSuggest.Name = "lblSuggest";
+            this.lblSuggest.Size = new System.Drawing.Size(337, 17);
+            this.lblSuggest.TabIndex = 20;
+            this.lblSuggest.Text = "Нажмите на чекбокс для мгновенной сортировки.";
+            // 
             // Form1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 590);
+            this.Controls.Add(this.lblSuggest);
             this.Controls.Add(this.lbl6);
             this.Controls.Add(this.lbl5);
             this.Controls.Add(this.lbl4);
@@ -237,7 +237,6 @@ namespace Task3._1
             this.Controls.Add(this.cbLastName);
             this.Controls.Add(this.cbFirtsName);
             this.Controls.Add(this.lblTitle1);
-            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnGenerate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
@@ -251,7 +250,6 @@ namespace Task3._1
 
         #endregion
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label lblTitle1;
         private System.Windows.Forms.CheckBox cbFirtsName;
         private System.Windows.Forms.CheckBox cbLastName;
@@ -267,6 +265,7 @@ namespace Task3._1
         private System.Windows.Forms.Label lbl4;        
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.Label lblSuggest;
     }
 }
 

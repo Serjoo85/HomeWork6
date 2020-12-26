@@ -43,12 +43,9 @@ namespace Task3._1
             lvStudentTable.Columns.Add("Course", 50, HorizontalAlignment.Center);
             lvStudentTable.Columns.Add("Average grade", 90, HorizontalAlignment.Center);
 
-            lbl1.Text = "";
-            lbl2.Text = "";
-            lbl3.Text = "";
-            lbl4.Text = "";
-            lbl5.Text = "";
-            lbl6.Text = "";
+            lblSuggest.Text = "Для мгновенной\nсортировки\nиспользуйте чекбоксы.";
+
+            LblPrint();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,12 +56,7 @@ namespace Task3._1
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (Mdlgts.f != null)
-            {
-                Student.ComplexSort(Mdlgts.f);
-                lvStudentTable.Items.Clear();
-                lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
-            }
+
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -88,31 +80,37 @@ namespace Task3._1
         private void cbFirtsName_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbFirtsName, 1);
+            SortStList();
         }
 
         private void cbLastName_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbLastName, 2);
+            SortStList();
         }
 
         private void cbAge_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbAge, 3);
+            SortStList();
         }
 
         private void cbFaculty_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbFaculty, 4);
+            SortStList();
         }
 
         private void cbCourse_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbCourse, 5);
+            SortStList();
         }
 
         private void cbAverageG_CheckedChanged(object sender, EventArgs e)
         {
             CheckboxAction(cbAverageG, 6);
+            SortStList();
         }
 
         private void CheckboxAction(CheckBox cb, int value)
@@ -124,6 +122,15 @@ namespace Task3._1
                 lblText.Remove(value);                
             }
             LblPrint();
+        }
+        private void SortStList()
+        {
+            if (Mdlgts.f != null)
+            {
+                Student.ComplexSort(Mdlgts.f);
+                lvStudentTable.Items.Clear();
+                lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
+            }
         }
 
         private void LblPrint()
