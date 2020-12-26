@@ -11,20 +11,32 @@ namespace Task3._1
     д) разработать единый метод подсчета количества студентов по различным параметрам
     выбора с помощью делегата и методов предикатов.
     
-
-
     Сергей Иванов.     
      */
 
     public partial class Form1 : Form
     {
+
+        /// <summary>
+        /// Массив номеров для Chekboxes.
+        /// </summary>
         internal struct lblText
         {
             public static int[] text = new int[6];
-            public static void Add(int index, int value)
+            
+            /// <summary>
+            /// Добавление номера в массив.
+            /// </summary>
+            /// <param name="cbNumber">
+            /// номер Chexbox сверху вниз.
+            /// </param>
+            /// <param name="index">
+            /// индекс в списке делегатов.
+            /// </param>
+            public static void Add(int cbNumber, int index)
             {
-                index--;
-                text[index] = value;
+                cbNumber--;
+                text[cbNumber] = index;
             }
             public static void Remove(int index)
             {
@@ -121,13 +133,13 @@ namespace Task3._1
             SortStList();
         }
 
-        private void CheckboxAction(CheckBox cb, int value)
+        private void CheckboxAction(CheckBox cb, int cbNumber)
         {
-            if (cb.Checked) lblText.Add(value, Mdlgts.Add(value));
+            if (cb.Checked) lblText.Add(cbNumber, Mdlgts.Add(cbNumber));
             else
             {
-                Mdlgts.Remove(value);
-                lblText.Remove(value);                
+                Mdlgts.Remove(cbNumber);
+                lblText.Remove(cbNumber);                
             }
             LblPrint();
         }
