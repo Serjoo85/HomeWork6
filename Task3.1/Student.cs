@@ -6,7 +6,9 @@ namespace Task3._1
 {
     public class Student : IComparable
     {
-        private static Delegate[] arrDel;        
+        // Массив для проброса делегатов
+        // обеспечивающих логику сортировки.
+        private static Delegate[] arrDel;
         public static List<Student> StList = new List<Student>();
         internal string FirstName { get; set; }
         internal string LastName { get; set; }
@@ -26,6 +28,7 @@ namespace Task3._1
             this.AverageGrade = AverageGrade;
         }
 
+        // Генерируем лист из студентов.
         public static void GenerateStudentList(int number)
         {
             StList.Clear();
@@ -38,6 +41,9 @@ namespace Task3._1
             }
         }
 
+        // Метод реализации интерфейса IComparable
+        // соритрует наш лист применяя
+        // заложенную списком делегатов очередность.
         public int CompareTo(object obj)
         {            
             Student st = obj as Student;
@@ -53,6 +59,7 @@ namespace Task3._1
             return 0;
         }
         
+        // Метод комплексной сортировки.
         public static void ComplexSort(Func<Student, Student, int> f)
         {
             arrDel = f.GetInvocationList();

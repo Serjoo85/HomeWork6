@@ -43,7 +43,7 @@ namespace Task3._1
             lvStudentTable.Columns.Add("Course", 50, HorizontalAlignment.Center);
             lvStudentTable.Columns.Add("Average grade", 90, HorizontalAlignment.Center);
 
-            lblSuggest.Text = "Для мгновенной\nсортировки\nиспользуйте чекбоксы.";
+            lblSuggest.Text = "For sorting\nuse checkbox.";
 
             LblPrint();
         }
@@ -52,11 +52,6 @@ namespace Task3._1
         {            
             Student.GenerateStudentList(1000);
             lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
-        }
-
-        private void btnSort_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)

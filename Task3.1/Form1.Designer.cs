@@ -209,7 +209,7 @@ namespace Task3._1
             // lblSuggest
             // 
             this.lblSuggest.AutoSize = true;
-            this.lblSuggest.Location = new System.Drawing.Point(536, 336);
+            this.lblSuggest.Location = new System.Drawing.Point(548, 335);
             this.lblSuggest.Name = "lblSuggest";
             this.lblSuggest.Size = new System.Drawing.Size(337, 17);
             this.lblSuggest.TabIndex = 20;
