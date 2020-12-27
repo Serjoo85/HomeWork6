@@ -87,21 +87,16 @@ namespace Task3._1
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
-        {            
+        {
+            cbReset();
             Student.GenerateStudentList(1000);
             lvStudentTable.Items.Clear();
-            lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());
+            lvStudentTable.Items.AddRange(BusinessLogic.GetLvi());            
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            Mdlgts.f = null;
-            cbFirtsName.Checked = false;
-            cbLastName.Checked = false;
-            cbAge.Checked = false;
-            cbFaculty.Checked = false;
-            cbCourse.Checked = false;
-            cbAverageG.Checked = false;
+            cbReset();
         }
 
         private void cbFirtsName_CheckedChanged(object sender, EventArgs e)
@@ -169,6 +164,17 @@ namespace Task3._1
             lbl4.Text = (lblText.textLbl[3] != 0) ? lblText.textLbl[3].ToString() : "";
             lbl5.Text = (lblText.textLbl[4] != 0) ? lblText.textLbl[4].ToString() : "";
             lbl6.Text = (lblText.textLbl[5] != 0) ? lblText.textLbl[5].ToString() : "";
+        }
+
+        private void cbReset()
+        {
+            Mdlgts.f = null;
+            cbFirtsName.Checked = false;
+            cbLastName.Checked = false;
+            cbAge.Checked = false;
+            cbFaculty.Checked = false;
+            cbCourse.Checked = false;
+            cbAverageG.Checked = false;
         }
     }
 }
